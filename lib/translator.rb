@@ -3,7 +3,7 @@ require 'pry'
 
 def load_library
   library = YAML.load_file("emoticons.yml")
-  binding.pry
+  library
 end
 binding.pry
 
