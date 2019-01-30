@@ -1,9 +1,8 @@
 require 'yaml'
 require 'pry'
 
-def load_library
-  fn = File.dirname(File.expand_path(__FILE__)) + '/emoticons.yml'
-  library_hash = YAML::load(File.open(fn))
+def load_library(filepath)
+  library_hash = YAML::load(File.open(filepath))
   library_hash
 end
 
