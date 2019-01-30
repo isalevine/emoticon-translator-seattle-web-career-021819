@@ -12,6 +12,7 @@ def load_library(filepath)
       hash_output["get_meaning"][emoticon] = emoticon_meanings
     end
   end
+  hash_output
 end
 
 
