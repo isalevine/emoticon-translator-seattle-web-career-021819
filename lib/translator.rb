@@ -15,7 +15,7 @@ def load_library(filepath)
       hash_output["get_emoticon"][english_word] = library_hash[english_word]
   end
 
-  
+
   hash_output
 end
 
