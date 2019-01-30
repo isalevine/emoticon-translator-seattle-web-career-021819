@@ -8,11 +8,11 @@ def load_library(filepath)
   hash_output["get_emoticon"] = {}
 
   library_hash.each do |emoticon_meanings, emoticon_array|
+    hash_output["get_emoticon"][emoticon_meanings] = []
     emoticon_array.each do |emoticon|
       hash_output["get_meaning"][emoticon] = emoticon_meanings
+      hash_output["get_emoticon"][emoticon_meanings] << emoticon
     end
-    emoticon_meanings.each do |english_word|
-      hash_output["get_emoticon"][english_word] = library_hash[english_word]
   end
 
 
