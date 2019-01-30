@@ -11,7 +11,11 @@ def load_library(filepath)
     emoticon_array.each do |emoticon|
       hash_output["get_meaning"][emoticon] = emoticon_meanings
     end
+    emoticon_meanings.each do |english_word|
+      hash_output["get_emoticon"][english_word] = library_hash[english_word]
   end
+
+  
   hash_output
 end
 
