@@ -3,9 +3,10 @@ require 'pry'
 
 def load_library
   fn = File.dirname(File.expand_path(__FILE__)) + '/emoticons.yml'
-  cnf = YAML::load(File.open(fn))
+  library_hash = YAML::load(File.open(fn))
+  library_hash
 end
-binding.pry
+
 
 def get_japanese_emoticon
   # code goes here
