@@ -2,7 +2,7 @@ require 'yaml'
 require 'pry'
 
 def load_library
-  fn = File.dirname(File.expand_path(__FILE__)) + '\emoticons.yml'
+  fn = File.dirname(File.expand_path(__FILE__)) + '/emoticons.yml'
   cnf = YAML::load(File.open(fn))
 end
 binding.pry
