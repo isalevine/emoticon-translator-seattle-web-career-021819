@@ -8,11 +8,10 @@ def load_library(filepath)
   hash_output["get_emoticon"] = {}
 
   library_hash.each do |emoticon_meanings, emoticon_array|
-    hash_output["get_emoticon"][emoticon_meanings] = []
-    emoticon_array.each do |emoticon|
-      hash_output["get_meaning"][emoticon] = emoticon_meanings
-      hash_output["get_emoticon"][emoticon_meanings] << emoticon
-    end
+    # emoticon_array[0] is the ENGLISH emoticon, i.e. "O:)"
+    # emoticon_array[1] is the JAPANESE emoticon, i.e. "☜(⌒▽⌒)☞"
+    hash_output["get_emoticon"][emoticon_array[0]] = emoticon_meanings
+    hash_output["get_meaning"][emoticon_array[1]] = emoticon_meanings
   end
 
 
