@@ -6,6 +6,7 @@ def load_library(filepath)
   library_hash = YAML::load(File.open(filepath))
   hash_output["get_meaning"] = {}
   hash_output["get_emoticon"] = {}
+  binding.pry
   library_hash.each do |emoticon_meanings, emoticon_array|
     emoticon_array.each do |emoticon|
       hash_output["get_meaning"][emoticon] = emoticon_meanings
