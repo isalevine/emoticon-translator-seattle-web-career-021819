@@ -13,14 +13,15 @@ def load_library(filepath)
     hash_output["get_emoticon"][emoticon_array[0]] = emoticon_array[1]
     hash_output["get_meaning"][emoticon_array[1]] = emoticon_meanings
   end
-
-
   hash_output
 end
 
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(filepath, english_emoticon)
+  string_output = ""
+  library_hash = load_library(filepath)
+  string_output = library_hash["get_emoticon"][english_emoticon]
+  string_output
 end
 
 def get_english_meaning
