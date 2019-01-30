@@ -2,7 +2,7 @@ require 'yaml'
 require 'pry'
 
 def load_library
-  library = YAML.load_file("C:\Users\Yayzik\.atom\.learn-ide\home\classy-zombie-8275\emoticon-translator-seattle-web-career-021819\lib\emoticons.yml")
+  library = YAML.load("emoticons.yml")
   library
 end
 binding.pry
