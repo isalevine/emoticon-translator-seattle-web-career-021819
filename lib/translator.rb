@@ -2,8 +2,10 @@ require 'yaml'
 require 'pry'
 
 def load_library(filepath)
+  hash_output = {}
   library_hash = YAML::load(File.open(filepath))
-  library_hash
+  get_meaning = library_hash.keys
+  get_emoticon = library_hash.values
 end
 
 
