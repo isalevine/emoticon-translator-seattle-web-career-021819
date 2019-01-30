@@ -18,8 +18,13 @@ end
 
 
 def get_japanese_emoticon(filepath, english_emoticon)
+  string_output = ""
   library_hash = load_library(filepath)
-  string_output = library_hash["get_emoticon"][english_emoticon]
+  if library_hash["get_emoticon"].key?(english_emoticon)
+    string_output = library_hash["get_emoticon"][english_emoticon]
+  else
+    string_output = "Sorry, that emoticon was not found"
+  end
   string_output
 end
 
