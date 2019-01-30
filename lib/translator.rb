@@ -4,8 +4,8 @@ require 'pry'
 def load_library(filepath)
   hash_output = {}
   library_hash = YAML::load(File.open(filepath))
-  hash_output["get_meaning"] = library_hash.keys
-  hash_output["get_emoticon"] = library_hash.values
+  hash_output["get_meaning"] = {}
+  hash_output["get_emoticon"] = {}
   hash_output
 end
 
